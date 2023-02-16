@@ -13,7 +13,7 @@ var confirmLowerCase;
 // Prompt to confirm how many characters the user would like in their password
 function generatePassword() {
   var confirmLength = (prompt("How many characters would you like your password to contain?"));
-}
+
 // Loop if answer is outside the parameters 
 while (confirmLength <= 7 || confirmLength >= 49) {
   alert("Password length must be between 8-50 characters Try again");
@@ -28,13 +28,15 @@ var confirmSpecialCharacter = confirm("confrimfor special characters");
 var confirmNumericCharacter = confirm("confirm for numeric characters");
 var confirmLowerCase = confirm("confirm for lowercase characters ");
 var confirmUpperCase = confirm("confirm for uppercase characters");
-while (confirmUpperCase === false && confirmLowerCase === false && confirmSpecialCharacter === false && confirmNumericCharacter === false) {
+while (confirmUpperCase === false && confirmLowerCase === false && confirmSpecialCharacter === false && confirmNumericCharacter === false){
   alert("choose at least one parameter");
   var confirmSpecialCharacter = confirm("confirm to include special characters");
   var confirmNumericCharacter = confirm("confirm to include numeric characters");
   var confirmLowerCase = confirm("confirm to include lowercase characters");
   var confirmUpperCase = confirm("confirm to include uppercase characters");
-
+}
+return 
+}
   // Get references to the #generate element
   var generateBtn = document.querySelector("#generate");
 
